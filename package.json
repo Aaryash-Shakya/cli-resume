@@ -1,19 +1,19 @@
 {
-  "name": "aaryash",
-  "version": "1.0.0",
-  "description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aaryash-Shakya/aaryash-npm.git"
-  },
-  "author": "Aaryash Shakya",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Aaryash-Shakya/aaryash-npm/issues"
-  },
-  "homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme"
+  	"name": "aaryash",
+  	"version": "1.0.0",
+  	"description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
+  	"main": "index.js",
+  	"scripts": {
+  	  	"test": "echo \"Error: no test specified\" && exit 1"
+  	},
+  	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Aaryash-Shakya/aaryash-npm.git"
+	},
+	"author": "Aaryash Shakya",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Aaryash-Shakya/aaryash-npm/issues"
+	},
+	"homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme"
 }
