@@ -1,22 +1,26 @@
 {
   	"name": "aaryash",
-  	"version": "1.0.2",
+  	"version": "1.0.3",
   	"description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
   	"main": "index.js",
-	"type": "module",
+  	"type": "module",
   	"scripts": {
   	  	"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node ."
+  	  	"start": "node ."
   	},
   	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Aaryash-Shakya/aaryash-npm.git"
-	},
-	"bin": "./index.js",
-	"author": "Aaryash Shakya",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Aaryash-Shakya/aaryash-npm/issues"
-	},
-	"homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme"
+  	  	"type": "git",
+  	  	"url": "git+https://github.com/Aaryash-Shakya/aaryash-npm.git"
+  	},
+  	"bin": "./index.js",
+  	"author": "Aaryash Shakya",
+  	"license": "ISC",
+  	"bugs": {
+  	  	"url": "https://github.com/Aaryash-Shakya/aaryash-npm/issues"
+  	},
+  	"homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme",
+  	"dependencies": {
+  	  	"figlet": "^1.7.0",
+  	  	"gradient-string": "^2.0.2"
+  	}
 }

@@ -1,7 +1,10 @@
 #! /usr/bin/env node
-// function simplePrint() {
-//     return "Hello I am Aaryash Shakya";
-// }
+
+import figlet from "figlet";
+import gradientString from "gradient-string"
+
+let coolGradient = gradientString('red', 'green', 'blue');
+
 function delayPrint(message, delay) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -19,9 +22,28 @@ async function displayIntroduction() {
     await delayPrint("I enjoy building web applications and backend services.", 1000);
     await delayPrint("Feel free to connect with me on the following platforms.", 1000);
     await delayPrint("LinkedIn: https://www.linkedin.com/in/aaryash-shakya/", 1000);
-    await delayPrint("LinkedIn: https://www.github.com/Aaryash-Shakya/", 1000);
+    await delayPrint("Github: https://www.github.com/Aaryash-Shakya/", 1000);
 }
 
 // Call the function to display the introduction
 // module.exports = displayIntroduction;
-displayIntroduction();
+function setFiglet(message) {
+    figlet(message, {
+        font: "Larry 3D",
+        horizontalLayout: "default",
+        verticalLayout: "default",
+        width: 80,
+        whitespaceBreak: true,
+    }, function (err, data) {
+        if (err) {
+            console.log("Something went wrong...");
+            console.dir(err);
+            return;
+        }
+        // console.log(gradientString("#fe0130", "#0f85ff").multiline(data));
+        console.log(gradientString.pastel.multiline(data));
+    });
+}
+
+setFiglet("_HI! I'm_\n_Aaryash_\n_Shakya_");
+// displayIntroduction();
