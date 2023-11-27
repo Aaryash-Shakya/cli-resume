@@ -1,6 +1,6 @@
 {
   	"name": "aaryash",
-  	"version": "1.0.0",
+  	"version": "1.0.1",
   	"description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
   	"main": "index.js",
 	"type": "module",
