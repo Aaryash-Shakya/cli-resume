@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // function simplePrint() {
 //     return "Hello I am Aaryash Shakya";
 // }
