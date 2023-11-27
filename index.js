@@ -5,25 +5,29 @@ import gradientString from "gradient-string"
 
 let coolGradient = gradientString('red', 'green', 'blue');
 
-function delayPrint(message, delay) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            console.log(message)
-            resolve();
-        }, delay);
-    });
+const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
+
+async function welcome(){
+    setFiglet("_Aaryash_\n_Shakya_\n");
+    await sleep();
+    console.log();
+    console.log();
+    console.log("Aaryash Shakya.");
+    console.log("I'm a MERN Stack developer with a passion for coding.");
+    console.log("I'm currently studying BSc. CSIT at Sagarmatha College of Science and Technology.");
+    console.log("My favorite programming tools are TypeScript, SCSS, and C++.");
+    console.log("Feel free to connect with me on the following platforms.\n");
+    console.log("LinkedIn: https://www.linkedin.com/in/aaryash-shakya/");
+    console.log("Github: https://www.github.com/Aaryash-Shakya/");
 }
 
-async function displayIntroduction() {
-    await delayPrint("Hello! I'm Aaryash Shakya.", 1000);
-    await delayPrint("I'm a MERN Stack developer with a passion for coding.", 1000);
-    await delayPrint("I'm currently studying BSc. CSIT in Sagarmatha College of Science and Technology.", 1000);
-    await delayPrint("My favorite programming languages and frameworks are TypeScript, SCSS, and C++.", 1000);
-    await delayPrint("I enjoy building web applications and backend services.", 1000);
-    await delayPrint("Feel free to connect with me on the following platforms.", 1000);
-    await delayPrint("LinkedIn: https://www.linkedin.com/in/aaryash-shakya/", 1000);
-    await delayPrint("Github: https://www.github.com/Aaryash-Shakya/", 1000);
-}
+// async function displayIntroduction() {
+//     await delayPrint(gradientString('#4bad3b', '#4bad3b')("M -> MongoDB"), 200);
+//     await delayPrint(gradientString('#efd81d', '#efd81d')("E -> Express"), 200);
+//     await delayPrint(gradientString('#61dbfb', '#61dbfb')("R -> React"), 200);
+//     await delayPrint(gradientString('#7ec727', '#7ec727')("N -> Node.js"), 500);
+    
+// }
 
 // Call the function to display the introduction
 // module.exports = displayIntroduction;
@@ -45,5 +49,5 @@ function setFiglet(message) {
     });
 }
 
-setFiglet("_HI! I'm_\n_Aaryash_\n_Shakya_");
-// displayIntroduction();
+// driver code using top level await
+await welcome();
