@@ -22,4 +22,5 @@ async function displayIntroduction() {
 }
 
 // Call the function to display the introduction
-module.exports = displayIntroduction;
+// module.exports = displayIntroduction;
+displayIntroduction();
