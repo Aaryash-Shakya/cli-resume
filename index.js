@@ -52,16 +52,17 @@ async function welcome() {
 async function introduction() {
     console.log(chalk.greenBright("\n\nHI! I am Aaryash Shakya."));
     await sleep();
-    console.log("I am a MERN Stack developer.");
-    console.log("I am BSc. CSIT student at Sagarmatha College of Science and Technology.");
-    console.log("My favorite programming tools are TypeScript, SCSS, and C++.");
-    console.log("Feel free to connect with me on the following platforms.\n");
-    console.log("LinkedIn: https://www.linkedin.com/in/aaryash-shakya/");
-    console.log("Github: https://www.github.com/Aaryash-Shakya/");
+    console.log("I am a MERN Stack developer with expertise in web applications.");
+    console.log("Currently pursuing a BSc. CSIT degree at Sagarmatha College of Science and Technology.");
+    console.log("Passionate about clean code, design patterns, and continuous learning.");
+    console.log("I have contributed to open-source projects and actively participate in coding communities.");
+    console.log("My goal is to leverage technology to create innovative solutions that make a positive impact.");
 }
 
 async function userInterface() {
-    console.log(chalk.greenBright("\n+++++++++++++++++++++++++++++++++++++++++++++++++++"));
+    console.log(
+        chalk.greenBright("\n\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    );
     let exit = false;
     let ans = await inquirer.prompt({
         name: "option",
@@ -71,10 +72,10 @@ async function userInterface() {
     });
     switch (ans.option) {
         case "Educational Background":
-            console.log("I am padante");
+            console.log("Education example");
             break;
         case "Contact Information":
-            console.log("Social media");
+            console.log("Social media example");
             break;
         case "Exit":
             exit = true;
@@ -83,7 +84,7 @@ async function userInterface() {
             "invalid option";
     }
     if (exit) {
-        console.log("Exiting");
+        console.log(chalk.red("Exiting..."));
     } else {
         userInterface();
     }
@@ -92,4 +93,5 @@ async function userInterface() {
 // driver code using top level await
 console.clear();
 await welcome();
+await introduction();
 await userInterface();
