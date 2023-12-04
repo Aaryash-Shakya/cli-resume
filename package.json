@@ -1,6 +1,6 @@
 {
   	"name": "aaryash",
-  	"version": "1.0.3",
+  	"version": "2.0.0",
   	"description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
   	"main": "index.js",
   	"type": "module",
@@ -20,7 +20,10 @@
   	},
   	"homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme",
   	"dependencies": {
+  	  	"chalk": "^5.3.0",
   	  	"figlet": "^1.7.0",
-  	  	"gradient-string": "^2.0.2"
+  	  	"gradient-string": "^2.0.2",
+  	  	"inquirer": "^9.2.12",
+  	  	"nanospinner": "^1.1.0"
   	}
 }
