@@ -24,7 +24,6 @@ function setFiglet(message) {
                 console.dir(err);
                 return;
             }
-            // console.log(gradientString("#fe0130", "#0f85ff").multiline(data));
             console.log(gradientString.pastel.multiline(data));
         }
     );
@@ -54,9 +53,75 @@ async function introduction() {
     await sleep();
     console.log("I am a MERN Stack developer with expertise in web applications.");
     console.log("Currently pursuing a BSc. CSIT degree at Sagarmatha College of Science and Technology.");
-    console.log("Passionate about clean code, design patterns, and continuous learning.");
+    console.log("Passionate about clean code, innovative technology, and continuous learning.");
     console.log("I have contributed to open-source projects and actively participate in coding communities.");
     console.log("My goal is to leverage technology to create innovative solutions that make a positive impact.");
+}
+
+function educationalBackground() {
+    const educations = [
+        {
+            level: "Grade 10",
+            institute: "Maitri Shishu Vidhyalaya",
+            startYear: "2006 AD",
+            passYear: "2018 AD",
+        },
+        {
+            level: "+2 Science",
+            institute: "National School of Sciences",
+            startYear: "2018 AD",
+            passYear: "2020 AD",
+        },
+        {
+            level: "BSc. Computer Science and Information Technology",
+            institute: "Sagarmatha College of Science and Technology",
+            startYear: "2021 AD",
+            passYear: "ongoing",
+        },
+    ];
+    console.log("--------------------------");
+    console.log("| Educational Background |");
+    console.log("--------------------------");
+    console.log("\n--------------------------------------------");
+    educations.forEach(async (education) => {
+        console.log(`Level: ${education.level}`);
+        console.log(`\t${education.institute}`);
+        console.log(`\t${education.startYear} - ${education.passYear}`);
+        console.log("--------------------------------------------");
+    });
+}
+
+function contactInformation() {
+    const contacts = [
+        {
+            platform: "Email",
+            username: "aaryashshakya.dev@gmail.com",
+            link: null,
+        },
+        {
+            platform: "Github",
+            username: "Aaryash-Shakya",
+            link: "https://github.com/Aaryash-Shakya",
+        },
+        {
+            platform: "LinkedIn",
+            username: "aaryash-shakya",
+            link: "https://linkedin.com/in/aaryash-shakya",
+        },
+    ];
+    console.log("-----------------------");
+    console.log("| Contact Information |");
+    console.log("-----------------------\n");
+    console.log("You can find me on the following platforms.");
+    console.log("--------------------------------------------");
+    contacts.forEach((contact) => {
+        console.log(`${contact.platform}: `);
+        console.log(`\tusername: ${contact.username}`);
+        if (contact.link !== null) {
+            console.log(`\tlink: ${contact.link}`);
+        }
+        console.log("--------------------------------------------");
+    });
 }
 
 async function userInterface() {
@@ -72,19 +137,21 @@ async function userInterface() {
     });
     switch (ans.option) {
         case "Educational Background":
-            console.log("Education example");
+            educationalBackground();
             break;
         case "Contact Information":
-            console.log("Social media example");
+            contactInformation();
             break;
         case "Exit":
             exit = true;
             break;
         default:
-            "invalid option";
+            console.log("invalid option");
     }
     if (exit) {
         console.log(chalk.red("Exiting..."));
+        await sleep(300);
+        console.log(chalk.red("BYE"));
     } else {
         userInterface();
     }
