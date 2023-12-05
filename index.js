@@ -35,6 +35,17 @@ async function downloadAnimation(downloadName) {
     spinner.success({ text: `${downloadName} Downloaded` });
 }
 
+function printHeaderInBox(header) {
+    const newHeader = `| ${header} |`;
+    let bar = "";
+    for (let i = 0; i < newHeader.length; i++) {
+        bar += "-";
+    }
+    console.log(chalk.yellowBright(bar));
+    console.log(chalk.yellowBright(newHeader));
+    console.log(chalk.yellowBright(bar));
+}
+
 async function welcome() {
     setFiglet("_Aaryash_\n_Shakya_\n");
     await sleep();
@@ -76,10 +87,8 @@ function contactInformation() {
             link: "https://linkedin.com/in/aaryash-shakya",
         },
     ];
-    console.log("-----------------------");
-    console.log("| Contact Information |");
-    console.log("-----------------------\n");
-    console.log("You can find me on the following platforms.");
+    printHeaderInBox("Contact Information");
+    console.log("\nYou can find me on the following platforms.");
     console.log("--------------------------------------------");
     contacts.forEach((contact) => {
         console.log(chalk.cyanBright(`${contact.platform}: `));
@@ -112,9 +121,7 @@ function educationalBackground() {
             passYear: "ongoing",
         },
     ];
-    console.log("--------------------------");
-    console.log("| Educational Background |");
-    console.log("--------------------------");
+    printHeaderInBox("Educational Background");
     console.log("\n--------------------------------------------");
     educations.forEach(async (education) => {
         console.log(`${chalk.greenBright(education.level)}`);
@@ -242,9 +249,7 @@ function skillsAndExpertise() {
             experience: "2 years",
         },
     ];
-    console.log("------------------------");
-    console.log("| Skills and Expertise |");
-    console.log("------------------------");
+    printHeaderInBox("Skills and Expertise");
     console.log("\n--------------------------------------------");
     skills.forEach(async (skill) => {
         console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
@@ -266,7 +271,7 @@ async function userInterface() {
             "Contact Information",
             "Skills and Expertise",
             "Projects",
-            "HObbies and Interests",
+            "Hobbies and Interests",
             "Exit",
         ],
         message: "What would you like to know about me?",
