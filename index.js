@@ -58,6 +58,39 @@ async function introduction() {
     console.log("My goal is to leverage technology to create innovative solutions that make a positive impact.");
 }
 
+function contactInformation() {
+    const contacts = [
+        {
+            platform: "Email",
+            username: "aaryashshakya.dev@gmail.com",
+            link: null,
+        },
+        {
+            platform: "Github",
+            username: "Aaryash-Shakya",
+            link: "https://github.com/Aaryash-Shakya",
+        },
+        {
+            platform: "LinkedIn",
+            username: "aaryash-shakya",
+            link: "https://linkedin.com/in/aaryash-shakya",
+        },
+    ];
+    console.log("-----------------------");
+    console.log("| Contact Information |");
+    console.log("-----------------------\n");
+    console.log("You can find me on the following platforms.");
+    console.log("--------------------------------------------");
+    contacts.forEach((contact) => {
+        console.log(chalk.cyanBright(`${contact.platform}: `));
+        console.log(`\tusername: ${contact.username}`);
+        if (contact.link !== null) {
+            console.log(`\tlink: ${contact.link}`);
+        }
+        console.log("--------------------------------------------");
+    });
+}
+
 function educationalBackground() {
     const educations = [
         {
@@ -84,42 +117,138 @@ function educationalBackground() {
     console.log("--------------------------");
     console.log("\n--------------------------------------------");
     educations.forEach(async (education) => {
-        console.log(`Level: ${education.level}`);
+        console.log(`${chalk.greenBright(education.level)}`);
         console.log(`\t${education.institute}`);
         console.log(`\t${education.startYear} - ${education.passYear}`);
         console.log("--------------------------------------------");
     });
 }
 
-function contactInformation() {
-    const contacts = [
+function skillsAndExpertise() {
+    // skill based on current year 2023
+    const skills = [
         {
-            platform: "Email",
-            username: "aaryashshakya.dev@gmail.com",
-            link: null,
+            name: "C",
+            level: "Intermediate",
+            category: "Programming Language",
+            experience: "3 years",
         },
         {
-            platform: "Github",
-            username: "Aaryash-Shakya",
-            link: "https://github.com/Aaryash-Shakya",
+            name: "C++",
+            level: "Intermediate",
+            category: "Programming Language",
+            experience: "3 years",
         },
         {
-            platform: "LinkedIn",
-            username: "aaryash-shakya",
-            link: "https://linkedin.com/in/aaryash-shakya",
+            name: "JavaScript",
+            level: "Advance",
+            category: "Programming Language",
+            experience: "5 years",
+        },
+        {
+            name: "TypeScript",
+            level: "Intermediate",
+            category: "Programming Language",
+            experience: "1 year",
+        },
+        {
+            name: "Bash",
+            level: "Beginner",
+            category: "Programming Language",
+            experience: "1 year",
+        },
+        {
+            name: "HTML",
+            level: "Advance",
+            category: "Markup Language",
+            experience: "5 years",
+        },
+        {
+            name: "CSS",
+            level: "Advance",
+            category: "Stylesheet Language",
+            experience: "5 years",
+        },
+        {
+            name: "SASS",
+            level: "Advance",
+            category: "Stylesheet Language",
+            experience: "3 years",
+        },
+        {
+            name: "Bootstrap",
+            level: "Advance",
+            category: "Framework and Library",
+            experience: "2 years",
+        },
+        {
+            name: "Tailwind",
+            level: "Intermediate",
+            category: "Framework and Library",
+            experience: "2 years",
+        },
+        {
+            name: "React",
+            level: "Intermediate",
+            category: "Framework and Library",
+            experience: "2 years",
+        },
+        {
+            name: "Express",
+            level: "Intermediate",
+            category: "Framework and Library",
+            experience: "1 year",
+        },
+        {
+            name: "Node js",
+            level: "Intermediate",
+            category: "Runtime Environment",
+            experience: "1 year",
+        },
+        {
+            name: "MySQL",
+            level: "Intermediate",
+            category: "Database",
+            experience: "2 years",
+        },
+        {
+            name: "MongoDB",
+            level: "Intermediate",
+            category: "Database",
+            experience: "1 year",
+        },
+        {
+            name: "Git and GitHub",
+            level: "Advance",
+            category: "Version Control",
+            experience: "3 years",
+        },
+        {
+            name: "npm",
+            level: "Intermediate",
+            category: "Package Manager",
+            experience: "1 year",
+        },
+        {
+            name: "Linux",
+            level: "Intermediate",
+            category: "Operating System",
+            experience: "2 years",
+        },
+        {
+            name: "Photoshop",
+            level: "Beginner",
+            category: "Design and Graphics",
+            experience: "2 years",
         },
     ];
-    console.log("-----------------------");
-    console.log("| Contact Information |");
-    console.log("-----------------------\n");
-    console.log("You can find me on the following platforms.");
-    console.log("--------------------------------------------");
-    contacts.forEach((contact) => {
-        console.log(`${contact.platform}: `);
-        console.log(`\tusername: ${contact.username}`);
-        if (contact.link !== null) {
-            console.log(`\tlink: ${contact.link}`);
-        }
+    console.log("------------------------");
+    console.log("| Skills and Expertise |");
+    console.log("------------------------");
+    console.log("\n--------------------------------------------");
+    skills.forEach(async (skill) => {
+        console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
+        console.log(`\t${skill.level} / ${skill.experience}`);
         console.log("--------------------------------------------");
     });
 }
@@ -132,15 +261,31 @@ async function userInterface() {
     let ans = await inquirer.prompt({
         name: "option",
         type: "list",
-        choices: ["Educational Background", "Contact Information", "Exit"],
+        choices: [
+            "Educational Background",
+            "Contact Information",
+            "Skills and Expertise",
+            "Projects",
+            "HObbies and Interests",
+            "Exit",
+        ],
         message: "What would you like to know about me?",
     });
     switch (ans.option) {
+        case "Contact Information":
+            contactInformation();
+            break;
         case "Educational Background":
             educationalBackground();
             break;
-        case "Contact Information":
-            contactInformation();
+        case "Skills and Expertise":
+            skillsAndExpertise();
+            break;
+        case "Projects":
+            console.log("soon");
+            break;
+        case "Hobbies and Interests":
+            console.log("soon");
             break;
         case "Exit":
             exit = true;
@@ -159,6 +304,6 @@ async function userInterface() {
 
 // driver code using top level await
 console.clear();
-await welcome();
-await introduction();
+// await welcome();
+// await introduction();
 await userInterface();
