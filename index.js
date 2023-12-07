@@ -131,7 +131,7 @@ function educationalBackground() {
     });
 }
 
-function skillsAndExpertise() {
+async function skillsAndExpertise() {
     // skill based on current year 2023
     const skills = [
         {
@@ -250,12 +250,54 @@ function skillsAndExpertise() {
         },
     ];
     printHeaderInBox("Skills and Expertise");
-    console.log("\n--------------------------------------------");
-    skills.forEach(async (skill) => {
-        console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
-        console.log(`\t${skill.level} / ${skill.experience}`);
-        console.log("--------------------------------------------");
+    let ans = await inquirer.prompt({
+        name: "sortBy",
+        type: "list",
+        choices: ["Category (Default)", "List by Category (only names)", "Alphabetical", "Proficiency"],
+        message: "Sort skills by?",
     });
+
+    // after checking all conditions the printing algo begins so each case only sorts the array.
+    // not using break on each case to reduce repetition
+    switch (ans.sortBy) {
+        case "List by Category (only names)":
+            let currentCategory = "";
+            let skillArray = [];
+            console.log("\n--------------------------------------------");
+            for (let i in skills) {
+                if (currentCategory !== skills[i].category) {
+                    // on category change print the values in skillArray
+                    // don't execute for the first item
+                    if (currentCategory !== "") {
+                        console.log(`${chalk.greenBright(currentCategory)}: ${skillArray.join(", ")}`);
+                    }
+                    // update current category and reset skillArray
+                    currentCategory = skills[i].category;
+                    skillArray = [];
+                }
+                skillArray.push(skills[i].name);
+            }
+            console.log("--------------------------------------------");
+            // exception: need break coz we are printing in list
+            break;
+        case "Alphabetical":
+            skills.sort((a, b) => a.name.localeCompare(b.name));
+            // don't break just sort
+        // case "Proficiency":
+        //     skills.sort((a, b) => a.proficiency.localeCompare(b.proficiency));
+            // don't break just sort
+        case "Category (Default)":
+            console.log("\n--------------------------------------------");
+            skills.forEach(async (skill) => {
+                console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
+                console.log(`\t${skill.level} / ${skill.experience}`);
+                console.log("--------------------------------------------");    
+            });
+            break;
+        
+        default:
+            console.log("Invalid option");
+    }
 }
 
 async function userInterface() {
@@ -284,7 +326,7 @@ async function userInterface() {
             educationalBackground();
             break;
         case "Skills and Expertise":
-            skillsAndExpertise();
+            await skillsAndExpertise();
             break;
         case "Projects":
             console.log("soon");
@@ -299,9 +341,11 @@ async function userInterface() {
             console.log("invalid option");
     }
     if (exit) {
-        console.log(chalk.red("Exiting..."));
-        await sleep(300);
-        console.log(chalk.red("BYE"));
+        console.log(chalk.redBright("Exiting..."));
+        await sleep(150);
+        console.log(chalk.red("Thank you for visiting"));
+        await sleep(150);
+        console.log(chalk.redBright("BYE"));
     } else {
         userInterface();
     }
