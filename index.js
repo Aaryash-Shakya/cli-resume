@@ -280,21 +280,49 @@ async function skillsAndExpertise() {
             console.log("--------------------------------------------");
             // exception: need break coz we are printing in list
             break;
+        case "Proficiency":
+            // TODO very repetitive make the output portion a separate function
+            const advanceSkills = skills.filter((skill) => skill.level === "Advance");
+            const intermediateSkills = skills.filter((skill) => skill.level === "Intermediate");
+            const beginnerSkills = skills.filter((skill) => skill.level === "Beginner");
+            console.log("\n--------------------------------------------");
+            console.log(chalk.redBright('Advance'))
+            console.log("--------------------------------------------");
+            advanceSkills.forEach(async (skill) => {
+                console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
+                console.log(`\t${skill.level} / ${skill.experience}`);
+                console.log("--------------------------------------------");
+            });
+            console.log(chalk.redBright('Intermediate'))
+            console.log("--------------------------------------------");
+            intermediateSkills.forEach(async (skill) => {
+                console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
+                console.log(`\t${skill.level} / ${skill.experience}`);
+                console.log("--------------------------------------------");
+            });
+            console.log(chalk.redBright('Beginner'))
+            console.log("--------------------------------------------");
+            beginnerSkills.forEach(async (skill) => {
+                console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
+                console.log(`\t${skill.level} / ${skill.experience}`);
+                console.log("--------------------------------------------");
+            });
+            break;
         case "Alphabetical":
             skills.sort((a, b) => a.name.localeCompare(b.name));
-            // don't break just sort
+        // don't break just sort
         // case "Proficiency":
         //     skills.sort((a, b) => a.proficiency.localeCompare(b.proficiency));
-            // don't break just sort
+        // don't break just sort
         case "Category (Default)":
             console.log("\n--------------------------------------------");
             skills.forEach(async (skill) => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
-                console.log("--------------------------------------------");    
+                console.log("--------------------------------------------");
             });
             break;
-        
+
         default:
             console.log("Invalid option");
     }
