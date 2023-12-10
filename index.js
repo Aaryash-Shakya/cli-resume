@@ -353,6 +353,6 @@ async function userInterface() {
 
 // driver code using top level await
 console.clear();
-// await welcome();
-// await introduction();
+await welcome();
+await introduction();
 await userInterface();
