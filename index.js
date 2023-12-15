@@ -286,21 +286,21 @@ async function skillsAndExpertise() {
             const intermediateSkills = skills.filter((skill) => skill.level === "Intermediate");
             const beginnerSkills = skills.filter((skill) => skill.level === "Beginner");
             console.log("\n--------------------------------------------");
-            console.log(chalk.redBright('Advance'))
+            console.log(chalk.redBright("Advance"));
             console.log("--------------------------------------------");
             advanceSkills.forEach(async (skill) => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
             });
-            console.log(chalk.redBright('Intermediate'))
+            console.log(chalk.redBright("Intermediate"));
             console.log("--------------------------------------------");
             intermediateSkills.forEach(async (skill) => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
             });
-            console.log(chalk.redBright('Beginner'))
+            console.log(chalk.redBright("Beginner"));
             console.log("--------------------------------------------");
             beginnerSkills.forEach(async (skill) => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
@@ -326,6 +326,36 @@ async function skillsAndExpertise() {
         default:
             console.log("Invalid option");
     }
+}
+
+function myProjects() {
+    const projects = [
+        {
+            title: "Yatra Nepal",
+            techStack: "HTML, CSS, JavaScript, Bootstrap",
+            description:
+                "Created a web application featuring a dynamic calendar view showcasing diverse events throughout Nepal across the year, providing detailed descriptions for each event to enhance user engagement and awareness.",
+        },
+        {
+            title: "E-Commerce Web App",
+            techStack: "MERN Stack, Bootstrap, Nodemailer, JWT",
+            description:
+                "Feature-rich web application, seamlessly integrating all essential functionalities of a standard e-commerce platform.",
+        },
+        {
+            title: "Kheti Bazar",
+            techStack: "MERN Stack, Bootstrap",
+            description:
+                "A robust web app facilitating seamless Contract Management to pioneer Contract Farming - 1st runner up, TECHTRlX23 HACKATHON",
+        },
+        {
+            title: "E-Commerce Web App",
+            techStack: "MERN Stack, TypeScript, Nodemailer, JWT",
+            description: "A robust and scalable backend solution for a Food Delivery Platform.",
+        },
+    ];
+    printHeaderInBox("My Projects");
+    console.log("\n--------------------------------------------");
 }
 
 async function userInterface() {
@@ -357,7 +387,7 @@ async function userInterface() {
             await skillsAndExpertise();
             break;
         case "Projects":
-            console.log("soon");
+            myProjects();
             break;
         case "Hobbies and Interests":
             console.log("soon");
