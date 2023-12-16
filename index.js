@@ -334,7 +334,7 @@ function myProjects() {
             title: "Yatra Nepal",
             techStack: "HTML, CSS, JavaScript, Bootstrap",
             description:
-                "Created a web application featuring a dynamic calendar view showcasing diverse events throughout Nepal across the year, providing detailed descriptions for each event to enhance user engagement and awareness.",
+                "Web application featuring a dynamic calendar view showcasing diverse events throughout Nepal across the year",
         },
         {
             title: "E-Commerce Web App",
@@ -356,6 +356,18 @@ function myProjects() {
     ];
     printHeaderInBox("My Projects");
     console.log("\n--------------------------------------------");
+    projects.forEach(async (project) => {
+        console.log(`${chalk.greenBright(project.title)}`);
+        console.log(`\t${project.techStack}`);
+        console.log(`\t${project.description}`);
+        console.log("--------------------------------------------");
+    });
+}
+
+function randomFact() {
+    const facts = ["fact1", "fact2", "fact3"];
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    console.log(facts[randomIndex]);
 }
 
 async function userInterface() {
@@ -372,6 +384,7 @@ async function userInterface() {
             "Skills and Expertise",
             "Projects",
             "Hobbies and Interests",
+            "Random Fact about me",
             "Exit",
         ],
         message: "What would you like to know about me?",
@@ -392,6 +405,10 @@ async function userInterface() {
         case "Hobbies and Interests":
             console.log("soon");
             break;
+        case "Random Fact about me":
+            randomFact();
+            break;
+        // get this for yourself
         case "Exit":
             exit = true;
             break;
