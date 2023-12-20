@@ -6,6 +6,9 @@ import chalk from "chalk";
 import inquirer from "inquirer";
 import nanospinner from "nanospinner";
 
+// global variables
+let factUsedIndex = []
+
 const sleep = (ms = 1000) => new Promise(r => setTimeout(r, ms));
 
 function setFiglet(message) {
@@ -365,8 +368,28 @@ function myProjects() {
 }
 
 function randomFact() {
-    const facts = ["fact1", "fact2", "fact3"];
-    const randomIndex = Math.floor(Math.random() * facts.length);
+    const facts = [
+        "I watch a lot of videos on space, relativity and quantum mechanics.",
+        "I can speak 5 languages: Nepali, English, Newari, Hindi, Japanese.",
+        "I read a lot of web novels",
+        "I enjoy climbing and bouldering.",
+        "I am pretty good at chess (1400 chess.com)",
+    ];
+    randomIndex = Math.floor(Math.random() * facts.length);
+
+    // todo: try to make the random go through all before repeating
+    // if(factUsedIndex.length == facts.length){
+    //     factUsedIndex = []
+    // }
+
+    // let randomIndex = -1
+    // while(factUsedIndex.includes(randomIndex)){
+    //     randomIndex = Math.floor(Math.random() * facts.length);
+    // }
+    // factUsedIndex.push(randomIndex)
+
+
+    
     console.log(facts[randomIndex]);
 }
 
