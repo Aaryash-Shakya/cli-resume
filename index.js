@@ -6,7 +6,7 @@ import chalk from "chalk";
 import inquirer from "inquirer";
 import nanospinner from "nanospinner";
 
-const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms = 1000) => new Promise(r => setTimeout(r, ms));
 
 function setFiglet(message) {
     figlet(
@@ -90,7 +90,7 @@ function contactInformation() {
     printHeaderInBox("Contact Information");
     console.log("\nYou can find me on the following platforms.");
     console.log("--------------------------------------------");
-    contacts.forEach((contact) => {
+    contacts.forEach(contact => {
         console.log(chalk.cyanBright(`${contact.platform}: `));
         console.log(`\tusername: ${contact.username}`);
         if (contact.link !== null) {
@@ -123,7 +123,7 @@ function educationalBackground() {
     ];
     printHeaderInBox("Educational Background");
     console.log("\n--------------------------------------------");
-    educations.forEach(async (education) => {
+    educations.forEach(async education => {
         console.log(`${chalk.greenBright(education.level)}`);
         console.log(`\t${education.institute}`);
         console.log(`\t${education.startYear} - ${education.passYear}`);
@@ -282,27 +282,27 @@ async function skillsAndExpertise() {
             break;
         case "Proficiency":
             // TODO very repetitive make the output portion a separate function
-            const advanceSkills = skills.filter((skill) => skill.level === "Advance");
-            const intermediateSkills = skills.filter((skill) => skill.level === "Intermediate");
-            const beginnerSkills = skills.filter((skill) => skill.level === "Beginner");
+            const advanceSkills = skills.filter(skill => skill.level === "Advance");
+            const intermediateSkills = skills.filter(skill => skill.level === "Intermediate");
+            const beginnerSkills = skills.filter(skill => skill.level === "Beginner");
             console.log("\n--------------------------------------------");
-            console.log(chalk.redBright('Advance'))
+            console.log(chalk.redBright("Advance"));
             console.log("--------------------------------------------");
-            advanceSkills.forEach(async (skill) => {
+            advanceSkills.forEach(async skill => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
             });
-            console.log(chalk.redBright('Intermediate'))
+            console.log(chalk.redBright("Intermediate"));
             console.log("--------------------------------------------");
-            intermediateSkills.forEach(async (skill) => {
+            intermediateSkills.forEach(async skill => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
             });
-            console.log(chalk.redBright('Beginner'))
+            console.log(chalk.redBright("Beginner"));
             console.log("--------------------------------------------");
-            beginnerSkills.forEach(async (skill) => {
+            beginnerSkills.forEach(async skill => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
@@ -316,7 +316,7 @@ async function skillsAndExpertise() {
         // don't break just sort
         case "Category (Default)":
             console.log("\n--------------------------------------------");
-            skills.forEach(async (skill) => {
+            skills.forEach(async skill => {
                 console.log(`${chalk.greenBright(skill.name)}  (${skill.category})`);
                 console.log(`\t${skill.level} / ${skill.experience}`);
                 console.log("--------------------------------------------");
@@ -326,6 +326,48 @@ async function skillsAndExpertise() {
         default:
             console.log("Invalid option");
     }
+}
+
+function myProjects() {
+    const projects = [
+        {
+            title: "Yatra Nepal",
+            techStack: "HTML, CSS, JavaScript, Bootstrap",
+            description:
+                "Web application featuring a dynamic calendar view showcasing diverse events throughout Nepal across the year",
+        },
+        {
+            title: "E-Commerce Web App",
+            techStack: "MERN Stack, Bootstrap, Nodemailer, JWT",
+            description:
+                "Feature-rich web application, seamlessly integrating all essential functionalities of a standard e-commerce platform.",
+        },
+        {
+            title: "Kheti Bazar",
+            techStack: "MERN Stack, Bootstrap",
+            description:
+                "A robust web app facilitating seamless Contract Management to pioneer Contract Farming - 1st runner up, TECHTRlX23 HACKATHON",
+        },
+        {
+            title: "E-Commerce Web App",
+            techStack: "MERN Stack, TypeScript, Nodemailer, JWT",
+            description: "A robust and scalable backend solution for a Food Delivery Platform.",
+        },
+    ];
+    printHeaderInBox("My Projects");
+    console.log("\n--------------------------------------------");
+    projects.forEach(async project => {
+        console.log(`${chalk.greenBright(project.title)}`);
+        console.log(`\t${project.techStack}`);
+        console.log(`\t${project.description}`);
+        console.log("--------------------------------------------");
+    });
+}
+
+function randomFact() {
+    const facts = ["fact1", "fact2", "fact3"];
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    console.log(facts[randomIndex]);
 }
 
 async function userInterface() {
@@ -342,6 +384,7 @@ async function userInterface() {
             "Skills and Expertise",
             "Projects",
             "Hobbies and Interests",
+            "Random Fact about me",
             "Exit",
         ],
         message: "What would you like to know about me?",
@@ -357,11 +400,15 @@ async function userInterface() {
             await skillsAndExpertise();
             break;
         case "Projects":
-            console.log("soon");
+            myProjects();
             break;
         case "Hobbies and Interests":
             console.log("soon");
             break;
+        case "Random Fact about me":
+            randomFact();
+            break;
+        // get this for yourself
         case "Exit":
             exit = true;
             break;
