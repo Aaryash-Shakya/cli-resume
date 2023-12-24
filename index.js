@@ -7,7 +7,7 @@ import inquirer from "inquirer";
 import nanospinner from "nanospinner";
 
 // global variables
-let factUsedIndex = []
+let factIndex = 0
 
 const sleep = (ms = 1000) => new Promise(r => setTimeout(r, ms));
 
@@ -54,11 +54,12 @@ async function welcome() {
     await sleep();
     await downloadAnimation("User Profile");
     await downloadAnimation("Contact Information");
+    await downloadAnimation("Educational Background");
     await downloadAnimation("Skills and Expertise");
-    await downloadAnimation("Certifications");
-    await downloadAnimation("Project Details");
-    await downloadAnimation("Resume");
+    await downloadAnimation("Certification");
+    await downloadAnimation("Projects");
     await downloadAnimation("Hobbies and Interests");
+    await downloadAnimation("Resume");
     await sleep();
 }
 
@@ -331,6 +332,50 @@ async function skillsAndExpertise() {
     }
 }
 
+function LicensesAndCertifications() {
+    const certifications = [
+        {
+            name: "Responsive Web Design",
+            issuingOrganization: "freeCodeCamp",
+            issuedDate: "Sep 2023",
+            credentialUrl: "https://www.freecodecamp.org/certification/Aaryash-Shakya/responsive-web-design",
+        },
+        {
+            name: "Modern JavaScript: ES6 Basics",
+            issuingOrganization: "Coursera",
+            issuedDate: "Oct 2023",
+            credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/2T4X8XYFAPDB",
+        },
+        {
+            name: "Introduction to Bash Shell Scripting",
+            issuingOrganization: "Coursera",
+            issuedDate: "Oct 2023",
+            credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/TLY3QCG2TY5N",
+        },
+        {
+            name: "Command Line in Linux",
+            issuingOrganization: "Coursera",
+            issuedDate: "Oct 2023",
+            credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/EFGCQJLSEY3M",
+        },
+        {
+            name: "JavaScript Algorithms and Data Structures",
+            issuingOrganization: "freeCodeCamp",
+            issuedDate: "Nov 2023",
+            credentialUrl: "https://www.freecodecamp.org/certification/Aaryash-Shakya/javascript-algorithms-and-data-structures",
+        },
+    ];
+    printHeaderInBox("Licenses And Certifications");
+    console.log("\n--------------------------------------------");
+    certifications.forEach(async certification => {
+        console.log(`${chalk.greenBright(certification.name)}`);
+        console.log(`\t${certification.issuingOrganization}`);
+        console.log(`\tIssued ${certification.issuedDate}`);
+        console.log(`\${certification.credentialUrl}`);
+        console.log("--------------------------------------------");
+    });
+}
+
 function myProjects() {
     const projects = [
         {
@@ -352,7 +397,7 @@ function myProjects() {
                 "A robust web app facilitating seamless Contract Management to pioneer Contract Farming - 1st runner up, TECHTRlX23 HACKATHON",
         },
         {
-            title: "E-Commerce Web App",
+            title: "Food Delivery Backend",
             techStack: "MERN Stack, TypeScript, Nodemailer, JWT",
             description: "A robust and scalable backend solution for a Food Delivery Platform.",
         },
@@ -375,22 +420,7 @@ function randomFact() {
         "I enjoy climbing and bouldering.",
         "I am pretty good at chess (1400 chess.com)",
     ];
-    randomIndex = Math.floor(Math.random() * facts.length);
-
-    // todo: try to make the random go through all before repeating
-    // if(factUsedIndex.length == facts.length){
-    //     factUsedIndex = []
-    // }
-
-    // let randomIndex = -1
-    // while(factUsedIndex.includes(randomIndex)){
-    //     randomIndex = Math.floor(Math.random() * facts.length);
-    // }
-    // factUsedIndex.push(randomIndex)
-
-
-    
-    console.log(facts[randomIndex]);
+    console.log(facts[factIndex++]);
 }
 
 async function userInterface() {
@@ -402,10 +432,11 @@ async function userInterface() {
         name: "option",
         type: "list",
         choices: [
-            "Educational Background",
             "Contact Information",
+            "Educational Background",
             "Skills and Expertise",
-            "Projects",
+            "Licenses and Certifications",
+            "My Projects",
             "Hobbies and Interests",
             "Random Fact about me",
             "Exit",
@@ -422,7 +453,10 @@ async function userInterface() {
         case "Skills and Expertise":
             await skillsAndExpertise();
             break;
-        case "Projects":
+        case "Licenses and Certifications":
+            await LicensesAndCertifications();
+            break;
+        case "My Projects":
             myProjects();
             break;
         case "Hobbies and Interests":
