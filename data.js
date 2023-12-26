@@ -215,10 +215,22 @@ export const projects = [
 	},
 ];
 
+export const aboutMe = {
+	achievements: ["Won second place in a national hackathon"],
+	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
+	outdoorActivities: ["Cycling", "Climbing and Bouldering", "Hiking"],
+	games: ["Call of Duty", "Chess"],
+	ongoingLearning: ["Postgres with Sequelize", "Email Scheduler"],
+	futureLearning: ["React Native"],
+};
+
 export const facts = [
 	"I watch a lot of videos on space, relativity and quantum mechanics.",
 	"I can speak 5 languages: Nepali, English, Newari, Hindi, Japanese.",
 	"I read a lot of web novels",
 	"I enjoy climbing and bouldering.",
 	"I am pretty good at chess (1400 chess.com)",
+	"Favorite Dev YouTuber: Fireship, Hyperplexed",
+	"Favorite Linux Distro: Linux Mint XFCE",
+	"Currently working on an event management system"
 ];

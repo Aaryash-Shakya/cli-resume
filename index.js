@@ -5,7 +5,7 @@ import gradientString from "gradient-string";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import nanospinner from "nanospinner";
-import { contacts, educations, skills, certifications, projects, facts } from "./data.js";
+import { contacts, educations, skills, certifications, projects, hobbies, facts } from "./data.js";
 
 // global variables
 let factIndex = 0;
@@ -202,8 +202,13 @@ function myProjects() {
 	});
 }
 
+function aboutMe(){
+
+}
+
 function randomFact() {
-	console.log(facts[factIndex++]);
+	console.log(facts[factIndex]);
+	factIndex=(factIndex+1)%facts.length
 }
 
 async function userInterface() {
@@ -220,7 +225,7 @@ async function userInterface() {
 			"Skills and Expertise",
 			"Licenses and Certifications",
 			"My Projects",
-			"Hobbies and Interests",
+			"About Me",
 			"Random Fact about me",
 			"Exit",
 		],
@@ -243,7 +248,7 @@ async function userInterface() {
 			myProjects();
 			break;
 		case "Hobbies and Interests":
-			console.log("soon");
+			aboutMe();
 			break;
 		case "Random Fact about me":
 			randomFact();
