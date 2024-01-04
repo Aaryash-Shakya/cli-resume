@@ -5,7 +5,7 @@ import gradientString from "gradient-string";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import nanospinner from "nanospinner";
-import { contacts, educations, skills, certifications, projects, hobbies, facts } from "./data.js";
+import { contacts, educations, skills, certifications, projects, achievements, facts } from "./data.js";
 
 // global variables
 let factIndex = 0;
@@ -35,7 +35,7 @@ function setFiglet(message) {
 
 async function downloadAnimation(downloadName) {
 	const spinner = nanospinner.createSpinner(`Downloading ${downloadName}...`).start();
-	await sleep(700);
+	await sleep(600);
 	spinner.success({ text: `${downloadName} Downloaded` });
 }
 
@@ -202,13 +202,21 @@ function myProjects() {
 	});
 }
 
-function aboutMe(){
-
+function myAchievements() {
+	printHeaderInBox("My Achievements");
+	console.log("\n--------------------------------------------");
+	achievements.forEach(async achievement => {
+		console.log(`${chalk.greenBright(achievement.name)}`);
+		console.log(`\t${chalk.blueBright(achievement.result)}, ${achievement.date}`);
+		console.log(`\tDescription: ${achievement.description}`);
+		console.log(`\tOrganizer: ${achievement.organizedBy}`);
+		console.log("--------------------------------------------");
+	});
 }
 
 function randomFact() {
 	console.log(facts[factIndex]);
-	factIndex=(factIndex+1)%facts.length
+	factIndex = (factIndex + 1) % facts.length;
 }
 
 async function userInterface() {
@@ -225,7 +233,7 @@ async function userInterface() {
 			"Skills and Expertise",
 			"Licenses and Certifications",
 			"My Projects",
-			"About Me",
+			"My Achievements",
 			"Random Fact about me",
 			"Exit",
 		],
@@ -247,8 +255,8 @@ async function userInterface() {
 		case "My Projects":
 			myProjects();
 			break;
-		case "Hobbies and Interests":
-			aboutMe();
+		case "My Achievements":
+			myAchievements();
 			break;
 		case "Random Fact about me":
 			randomFact();

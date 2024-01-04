@@ -215,6 +215,25 @@ export const projects = [
 	},
 ];
 
+export const achievements = [
+	{
+		name: "In-House Project Competition",
+		description:
+			"Yatra Nepal - Web application featuring a dynamic calendar view showcasing diverse events throughout Nepal across the year",
+		organizedBy: "Dursikshya Education Network PVT LTD",
+		result: "2nd Place",
+		date: "July 2023",
+	},
+	{
+		name: "TECHTRIX22 HACKATHON",
+		description:
+			"Kheti Bazar - Robust web app facilitating seamless Contract Management to pioneer Contract Farming",
+		organizedBy: "CSIT Association of Nepal, New Summit College",
+		result: "2nd Place",
+		date: "September 2023",
+	},
+];
+
 export const aboutMe = {
 	achievements: ["Won second place in a national hackathon"],
 	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
@@ -232,5 +251,5 @@ export const facts = [
 	"I am pretty good at chess (1400 chess.com)",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
 	"Favorite Linux Distro: Linux Mint XFCE",
-	"Currently working on an event management system"
+	"Currently working on an event management system",
 ];
