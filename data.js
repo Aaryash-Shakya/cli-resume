@@ -130,6 +130,12 @@ export const skills = [
 		experience: "1 year",
 	},
 	{
+		name: "PostgreSQL",
+		level: "Beginner",
+		category: "Database",
+		experience: "2 months",
+	},
+	{
 		name: "Git and GitHub",
 		level: "Advance",
 		category: "Version Control",
@@ -238,17 +244,18 @@ export const aboutMe = {
 	achievements: ["Won second place in a national hackathon"],
 	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
 	outdoorActivities: ["Cycling", "Climbing and Bouldering", "Hiking"],
-	games: ["Call of Duty", "Chess"],
-	ongoingLearning: ["Postgres with Sequelize", "Email Scheduler"],
+	games: ["Chess", "Call of Duty", "Mobile Legends"],
+	ongoingLearning: ["Postgres with Sequelize", "Justand"],
 	futureLearning: ["React Native"],
 };
 
 export const facts = [
 	"I watch a lot of videos on space, relativity and quantum mechanics.",
 	"I can speak 5 languages: Nepali, English, Newari, Hindi, Japanese.",
-	"I read a lot of web novels",
+	"I love reading web novels",
 	"I enjoy climbing and bouldering.",
-	"I am pretty good at chess (1400 chess.com)",
+	"I am pretty good at chess (1500 chess.com)",
+	"I won gold medal in my college chess championship 2024.",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
 	"Favorite Linux Distro: Linux Mint XFCE",
 	"Currently working on an event management system",
