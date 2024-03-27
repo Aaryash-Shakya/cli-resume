@@ -106,6 +106,12 @@ export const skills = [
 		experience: "2 years",
 	},
 	{
+		name: "Next.js",
+		level: "Beginner",
+		category: "Framework and Library",
+		experience: "0 years",
+	},
+	{
 		name: "Express",
 		level: "Intermediate",
 		category: "Framework and Library",
@@ -238,14 +244,22 @@ export const achievements = [
 		result: "2nd Place",
 		date: "September 2023",
 	},
+	{
+		name: "LOCUS TECHENERGY HACKATHON 2024",
+		description:
+			"Prayatna - A robust solution for data encryption at rest (SQL DB) using AES-256, and AWS KMS",
+		organizedBy: "LOCUS, Pulchowk Campus, IOE, TU",
+		result: "2nd Place",
+		date: "March 2024",
+	},
 ];
 
 export const aboutMe = {
 	achievements: ["Won second place in a national hackathon"],
 	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
 	outdoorActivities: ["Cycling", "Climbing and Bouldering", "Hiking"],
-	games: ["Chess", "Call of Duty", "Mobile Legends"],
-	ongoingLearning: ["Postgres with Sequelize", "Justand"],
+	games: ["Chess", "Clash Royale"],
+	ongoingLearning: ["TypeORM", "Next.js"],
 	futureLearning: ["React Native"],
 };
 
