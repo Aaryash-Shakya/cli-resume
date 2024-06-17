@@ -14,6 +14,11 @@ export const contacts = [
 		username: "aaryash-shakya",
 		link: "https://linkedin.com/in/aaryash-shakya",
 	},
+	{
+		platform: "Instagram",
+		username: "aaryashshakya_",
+		link: "https://www.instagram.com/aaryashshakya_/",
+	},
 ];
 
 export const educations = [
@@ -247,19 +252,26 @@ export const achievements = [
 	{
 		name: "LOCUS TECHENERGY HACKATHON 2024",
 		description:
-			"Prayatna - A robust solution for data encryption at rest (SQL DB) using AES-256, and AWS KMS",
+			"Prayatna - A secure solution for data encryption at rest (SQL DB) using AES-256, and AWS KMS",
 		organizedBy: "LOCUS, Pulchowk Campus, IOE, TU",
 		result: "2nd Place",
 		date: "March 2024",
 	},
+	{
+		name: "DEERHACK 2024",
+		description:
+		"Doc Guard - A document validation solution that scans paper document with AI and stores the data in blockchain",
+		result: "1st Place",
+		date: "May 2024",
+	}
 ];
 
 export const aboutMe = {
-	achievements: ["Won second place in a national hackathon"],
+	achievements: ["Won multiple hackathons"],
 	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
 	outdoorActivities: ["Cycling", "Climbing and Bouldering", "Hiking"],
-	games: ["Chess", "Clash Royale"],
-	ongoingLearning: ["TypeORM", "Next.js"],
+	games: ["Chess", "Sudoku", "Mobile Legends"],
+	ongoingLearning: ["AI tuning", "Next.js"],
 	futureLearning: ["React Native"],
 };
 
@@ -272,5 +284,5 @@ export const facts = [
 	"I won gold medal in my college chess championship 2024.",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
 	"Favorite Linux Distro: Linux Mint XFCE",
-	"Currently working on an event management system",
+	"Currently working on an ecommerce app with next",
 ];

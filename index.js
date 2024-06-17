@@ -35,7 +35,7 @@ function setFiglet(message) {
 
 async function downloadAnimation(downloadName) {
 	const spinner = nanospinner.createSpinner(`Downloading ${downloadName}...`).start();
-	await sleep(600);
+	await sleep(400);
 	spinner.success({ text: `${downloadName} Downloaded` });
 }
 
