@@ -42,154 +42,154 @@ export const educations = [
 	},
 ];
 
-// skill based on current year 2023
+// skill based on current year 2024 Jan
 export const skills = [
 	{
 		name: "C",
 		level: "Intermediate",
 		category: "Programming Language",
 		experience: "3 years",
-		startedOn: new Date("2021-04-01"),
+		// 2021-04-01
 	},
 	{
 		name: "C++",
 		level: "Intermediate",
 		category: "Programming Language",
 		experience: "3 years",
-		startedOn: new Date("2021-10-01"),
+		// 2021-10-01
 	},
 	{
 		name: "JavaScript",
 		level: "Advance",
 		category: "Programming Language",
 		experience: "5 years",
-		startedOn: new Date("2018-06-01"),
+		// 2018-06-01
 	},
 	{
 		name: "TypeScript",
 		level: "Intermediate",
 		category: "Programming Language",
 		experience: "1 year",
-		startedOn: new Date("2023"),
+		// 2023
 	},
 	{
 		name: "Bash",
 		level: "Beginner",
 		category: "Programming Language",
 		experience: "1 year",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "HTML",
 		level: "Advance",
 		category: "Markup Language",
 		experience: "5 years",
-		startedOn: new Date("2018"),
+		// 2018
 	},
 	{
 		name: "CSS",
 		level: "Advance",
 		category: "Stylesheet Language",
 		experience: "5 years",
-		startedOn: new Date("2018"),
+		// 2018
 	},
 	{
 		name: "SASS",
 		level: "Advance",
 		category: "Stylesheet Language",
 		experience: "3 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "Bootstrap",
 		level: "Advance",
 		category: "Framework and Library",
 		experience: "2 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "Tailwind",
 		level: "Intermediate",
 		category: "Framework and Library",
 		experience: "2 years",
-		startedOn: new Date("2023"),
+		// 2023
 	},
 	{
 		name: "React",
 		level: "Intermediate",
 		category: "Framework and Library",
 		experience: "2 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "Next.js",
 		level: "Beginner",
 		category: "Framework and Library",
 		experience: "0 years",
-		startedOn: new Date("2024"),
+		// 2024
 	},
 	{
 		name: "Express",
 		level: "Intermediate",
 		category: "Framework and Library",
 		experience: "1 year",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "Node js",
 		level: "Intermediate",
 		category: "Runtime Environment",
 		experience: "1 year",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "MySQL",
 		level: "Intermediate",
 		category: "Database",
 		experience: "2 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "MongoDB",
 		level: "Intermediate",
 		category: "Database",
 		experience: "1 year",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "PostgreSQL",
 		level: "Beginner",
 		category: "Database",
 		experience: "2 months",
-		startedOn: new Date("2023"),
+		// 2023
 	},
 	{
 		name: "Git and GitHub",
 		level: "Advance",
 		category: "Version Control",
 		experience: "3 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "npm",
 		level: "Intermediate",
 		category: "Package Manager",
 		experience: "1 year",
-		startedOn: new Date("2023"),
+		// 2023
 	},
 	{
 		name: "Linux",
 		level: "Intermediate",
 		category: "Operating System",
 		experience: "2 years",
-		startedOn: new Date("2022"),
+		// 2022
 	},
 	{
 		name: "Photoshop",
 		level: "Beginner",
 		category: "Design and Graphics",
 		experience: "2 years",
-		startedOn: new Date("2021"),
+		// 2021
 	},
 ];
 
@@ -241,16 +241,20 @@ export const projects = [
 			"Feature-rich web application, seamlessly integrating all essential functionalities of a standard e-commerce platform.",
 	},
 	{
-		title: "Kheti Bazar",
-		techStack: "MERN Stack, Bootstrap",
-		description:
-			"A robust web app facilitating seamless Contract Management to pioneer Contract Farming - 1st runner up, TECHTRlX23 HACKATHON",
-	},
-	{
 		title: "Food Delivery Backend",
 		techStack: "MERN Stack, TypeScript, Nodemailer, JWT",
-		description: "A robust and scalable backend solution for a Food Delivery Platform.",
+		description: "A GeoLocation query based backend solution for a Food Delivery Platform.",
 	},
+	{
+		title: "Resort Booking System",
+		techStack: "PERN Stack (P = PostgreSQL), TypeScript, Tailwindcss",
+		description:"A map-based resort booking platform displaying real-time availability by date.",
+	},
+	{
+		title: "HeartWood",
+		techStack: "next.js, TypeScript, Tailwindcss, SQlite",
+		description: "A furniture e-commerce platform with a dynamic cart and page caching.",
+	}
 ];
 
 export const achievements = [
