@@ -219,6 +219,14 @@ function randomFact() {
 	factIndex = (factIndex + 1) % facts.length;
 }
 
+function getThisForYourself() {
+	printHeaderInBox("My Achievements");
+	console.log("\n--------------------------------------------");
+	console.log("Visit my GitHub profile to get this for yourself. The instructions are in the README.md file.");
+	console.log("https://github.com/Aaryash-Shakya/cli-resume/blob/main/README.md");
+	console.log("\n--------------------------------------------");
+}
+
 async function userInterface() {
 	console.log(
 		chalk.greenBright("\n\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -235,6 +243,7 @@ async function userInterface() {
 			"My Projects",
 			"My Achievements",
 			"Random Fact about me",
+			"Get this for Yourself",
 			"Exit",
 		],
 		message: "What would you like to know about me?",
@@ -261,7 +270,9 @@ async function userInterface() {
 		case "Random Fact about me":
 			randomFact();
 			break;
-		// get this for yourself
+		case "Get this for Yourself":
+			getThisForYourself();
+			break;
 		case "Exit":
 			exit = true;
 			break;
