@@ -306,7 +306,7 @@ export const facts = [
 	"I love reading web novels",
 	"I enjoy climbing and bouldering.",
 	"I am pretty good at chess (1500 chess.com)",
-	"I won gold medal in my college chess championship 2024.",
+	"I won gold medal in my college chess competition 2024.",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
 	"Favorite Linux Distro: Linux Mint XFCE",
 	"Currently working on an ecommerce app with next",

@@ -7,11 +7,11 @@ npx aaryash
 ```
 
 Alternatively, you can install the package first with
-```
+``` sh
+# install package separately
 npm install -g aaryash
-```
-and execute it with
-```
+
+# execute package
 npx aaryash
 ```
 
@@ -29,3 +29,4 @@ npx aaryash
 
 
 # Get this for yourselves
+[read GET-FOR-YOURSELF.md](https://github.com/Aaryash-Shakya/cli-resume/blob/main/GET-FOR-YOURSELF.md)
