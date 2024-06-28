@@ -10,15 +10,15 @@
   	},
   	"repository": {
   	  	"type": "git",
-  	  	"url": "git+https://github.com/Aaryash-Shakya/aaryash-npm.git"
+  	  	"url": "git+https://github.com/Aaryash-Shakya/cli-resume.git"
   	},
   	"bin": "./index.js",
   	"author": "Aaryash Shakya",
   	"license": "ISC",
   	"bugs": {
-  	  	"url": "https://github.com/Aaryash-Shakya/aaryash-npm/issues"
+  	  	"url": "https://github.com/Aaryash-Shakya/cli-resume/issues"
   	},
-  	"homepage": "https://github.com/Aaryash-Shakya/aaryash-npm#readme",
+  	"homepage": "https://github.com/Aaryash-Shakya/cli-resume#readme",
   	"dependencies": {
   	  	"chalk": "^5.3.0",
   	  	"figlet": "^1.7.0",
