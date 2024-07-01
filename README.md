@@ -1,5 +1,5 @@
-# aaryash-npm
-aaryash-npm is an npm package that allows you to display my resume directly in your terminal. It provides a clean and easy-to-read format for quick viewing and sharing.
+# cli-resume
+cli-resume is an npm package that allows you to display my resume directly in your terminal. It provides a clean and easy-to-read format for quick viewing and sharing.
 
 # Installation
 ```
@@ -7,8 +7,12 @@ npx aaryash
 ```
 
 Alternatively, you can install the package first with
-```
+``` sh
+# install package separately
 npm install -g aaryash
+
+# execute package
+npx aaryash
 ```
 
 # Features
@@ -22,3 +26,7 @@ npm install -g aaryash
 8. Highlight key projects with technology stack and descriptions
 9. Include notable achievements with organized events and results
 10. Provide additional personal details such as languages, outdoor activities, and ongoing learning topics
+
+
+# Get this for yourselves
+[read GET-FOR-YOURSELF.md](https://github.com/Aaryash-Shakya/cli-resume/blob/main/GET-FOR-YOURSELF.md)

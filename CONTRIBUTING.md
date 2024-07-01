@@ -6,7 +6,7 @@ First off, thank you for considering contributing to Resume CLI! Your contributi
 
 1. **Fork the repository**
 
-   Fork the [repository](https://github.com/Aaryash-Shakya/npm-aaryash) on GitHub to your own account.
+   Fork the [repository](https://github.com/Aaryash-Shakya/cli-resume) on GitHub to your own account.
 
 2. **Create a new branch**
 
@@ -43,11 +43,11 @@ By participating in this project, you agree to abide by the [Code of Conduct](CO
 
 ## Reporting Bugs
 
-If you find a bug, please create an issue on the [GitHub Issues page](https://github.com/Aaryash-Shakya/npm-aaryash/issues) with as much detail as possible. Include your operating system, Node.js version, and steps to reproduce the issue.
+If you find a bug, please create an issue on the [GitHub Issues page](https://github.com/Aaryash-Shakya/cli-resume/issues) with as much detail as possible. Include your operating system, Node.js version, and steps to reproduce the issue.
 
 ## Requesting Features
 
-If you have a feature request, please create an issue on the [GitHub Issues page](https://github.com/Aaryash-Shakya/npm-aaryash/issues) explaining your idea and why it would be useful.
+If you have a feature request, please create an issue on the [GitHub Issues page](https://github.com/Aaryash-Shakya/cli-resume/issues) explaining your idea and why it would be useful.
 
 ## Pull Request Guidelines
 
