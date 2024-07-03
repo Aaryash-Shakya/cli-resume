@@ -1,29 +1,32 @@
 {
-  	"name": "aaryash",
-  	"version": "2.1.0",
-  	"description": "Hi, I'm Aaryash Shakya – discover me in a quirky and unique way with this npm package!",
-  	"main": "index.js",
-  	"type": "module",
-  	"scripts": {
-  	  	"test": "echo \"Error: no test specified\" && exit 1",
-  	  	"start": "node ."
-  	},
-  	"repository": {
-  	  	"type": "git",
-  	  	"url": "git+https://github.com/Aaryash-Shakya/cli-resume.git"
-  	},
-  	"bin": "./index.js",
-  	"author": "Aaryash Shakya",
-  	"license": "ISC",
-  	"bugs": {
-  	  	"url": "https://github.com/Aaryash-Shakya/cli-resume/issues"
-  	},
-  	"homepage": "https://github.com/Aaryash-Shakya/cli-resume#readme",
-  	"dependencies": {
-  	  	"chalk": "^5.3.0",
-  	  	"figlet": "^1.7.0",
-  	  	"gradient-string": "^2.0.2",
-  	  	"inquirer": "^9.2.12",
-  	  	"nanospinner": "^1.1.0"
-  	}
+	"name": "aaryash",
+	"version": "2.1.1",
+	"description": "Hi, I'm Aaryash Shakya - discover me in a quirky and unique way with this npm package!",
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Aaryash-Shakya/cli-resume.git"
+	},
+	"bin": "./index.js",
+	"author": "Aaryash Shakya",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Aaryash-Shakya/cli-resume/issues"
+	},
+	"homepage": "https://github.com/Aaryash-Shakya/cli-resume#readme",
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"figlet": "^1.7.0",
+		"gradient-string": "^2.0.2",
+		"inquirer": "^9.2.12",
+		"nanospinner": "^1.1.0"
+	}
 }

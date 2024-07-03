@@ -5,7 +5,7 @@ Thank you for your interest in using this project! Follow these steps to get sta
 ## Steps to Get Started
 
 1. **Visit the Original Repo**  
-   Visit the original repository at [https://github.com/Aaryash-Shakya/cli-resume](https://github.com/Aaryash-Shakya/cli-resume).
+   Visit the original repository at <a href="https://github.com/Aaryash-Shakya/cli-resume" target="_blank">https://github.com/Aaryash-Shakya/cli-resume</a>
 
 2. **Star the Repo**  
    If you like this project, please give it a star. It helps to increase the visibility of the project.
@@ -17,7 +17,7 @@ Thank you for your interest in using this project! Follow these steps to get sta
    - Go to your forked repository on GitHub.
    - Click the "Code" button and copy the HTTPS link.
    - The link should look like `https://github.com/<your-username>/<repo-name>.git`
-   - Open your terminal.
+   - Open your terminal at where you want to clone it.
    - Run the following command to clone the forked repository to your local machine:
      ```sh
      git clone https://github.com/<your-username>/<repo-name>.git
@@ -42,6 +42,15 @@ Thank you for your interest in using this project! Follow these steps to get sta
    - Publish the package to npm with `npm publish`.
 
 Now, your package will be available to run on any machine with Node.js by entering `npx <package name>`.
+
+
+## Useful resources
+
+1. **To clone a repo**
+- <a href="https://youtu.be/q9wc7hUrW8U?si=YmAz9t20Ld0M7Fyh" target="_blank">https://youtu.be/q9wc7hUrW8U?si=YmAz9t20Ld0M7Fyh</a>
+2. **To publish package**
+- 
+
 
 ## Need Help?
 
