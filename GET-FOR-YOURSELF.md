@@ -27,16 +27,21 @@ Thank you for your interest in using this project! Follow these steps to get sta
    - Go to the `data.js` file, which includes all the data that will be shown.
    - Update the data to match your own information. Make sure to follow the same format to ensure it works correctly.
 
-6. **Modify `package.json`**  
+6. **Update `index.js` File**
+   - Goto function `welcome()` and update your name. If name is too long it may not fix so modify `setFiglet()` to adjust font and width. To test check point 7.
+   - Goto function `introduction()` and update the details to match yours.
+   - *Optional* Update placeholders as you see fit.
+
+7. **Modify `package.json`**  
    - Open the `package.json` file.
    - Change the `version` to `1.0.0`.
    - Change the `name` field to match your desired `package name`. This name will be used to launch the resume.
 
-7. **Test the Package**  
+8. **Test the Package**  
    - Use `npm link` to link the package locally.
    - Run `npx <package name>` to test it and make sure everything is working as expected.
 
-8. **Publish the Package**  
+9.  **Publish the Package**  
    - Create an account on [npmjs.com](https://www.npmjs.com/).
    - Login to your account from the terminal using `npm login`.
    - Publish the package to npm with `npm publish`.

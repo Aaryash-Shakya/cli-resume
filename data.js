@@ -286,7 +286,7 @@ export const achievements = [
 		name: "DEERHACK 2024",
 		description:
 		"Doc Guard - A document validation solution that scans paper document with AI and stores the data in blockchain",
-		result: "1st Place",
+		result: "Blockchain Track Winner (1st Place)",
 		date: "May 2024",
 	}
 ];
@@ -301,13 +301,13 @@ export const aboutMe = {
 };
 
 export const facts = [
-	"I watch a lot of videos on space, relativity and quantum mechanics.",
+	"I am a huge fan of science documentaries.",
 	"I can speak 5 languages: Nepali, English, Newari, Hindi, Japanese.",
-	"I love reading web novels",
+	"I enjoy reading web novels in my free time.",
 	"I enjoy climbing and bouldering.",
 	"I am pretty good at chess (1500 chess.com)",
 	"I won gold medal in my college chess competition 2024.",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
 	"Favorite Linux Distro: Linux Mint XFCE",
-	"Currently working on an ecommerce app with next",
+	"Currently working on an e-commerce app with next",
 ];

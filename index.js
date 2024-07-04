@@ -35,7 +35,7 @@ function setFiglet(message) {
 
 async function downloadAnimation(downloadName) {
 	const spinner = nanospinner.createSpinner(`Downloading ${downloadName}...`).start();
-	await sleep(400);
+	await sleep(300);
 	spinner.success({ text: `${downloadName} Downloaded` });
 }
 
@@ -65,13 +65,12 @@ async function welcome() {
 }
 
 async function introduction() {
-	console.log(chalk.greenBright("\n\nHI! I am Aaryash Shakya."));
+	console.log(`\n\nHI! I am ${chalk.green("Aaryash Shakya")}.`);
 	await sleep();
-	console.log("I am a MERN Stack developer with expertise in web applications.");
-	console.log("Currently pursuing a BSc. CSIT degree at Sagarmatha College of Science and Technology.");
+	console.log(`${chalk.blueBright("Full Stack Developer")} with expertise in web applications.`);
+	console.log(`Pursuing ${chalk.yellow("BSc. CSIT")} at Sagarmatha College of Science and Technology.`);
 	console.log("Passionate about clean code, innovative technology, and continuous learning.");
-	console.log("I have contributed to open-source projects and actively participate in coding communities.");
-	console.log("My goal is to leverage technology to create innovative solutions that make a positive impact.");
+	console.log("Enthusiastic contributor to open-source projects and active participant in coding communities.");
 }
 
 function contactInformation() {
@@ -220,7 +219,7 @@ function randomFact() {
 }
 
 function getThisForYourself() {
-	printHeaderInBox("My Achievements");
+	printHeaderInBox("Get For Yourself");
 	console.log("\n--------------------------------------------");
 	console.log("Visit my GitHub profile to get this for yourself. The instructions are in the README.md file.");
 	console.log("https://github.com/Aaryash-Shakya/cli-resume/blob/main/README.md");
