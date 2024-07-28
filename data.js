@@ -292,12 +292,11 @@ export const achievements = [
 ];
 
 export const aboutMe = {
-	achievements: ["Won multiple hackathons"],
-	languages: ["Nepali", "English", "Newari", "Hindi", "Japanese"],
-	outdoorActivities: ["Cycling", "Climbing and Bouldering", "Hiking"],
-	games: ["Chess", "Sudoku", "Mobile Legends"],
-	ongoingLearning: ["AI tuning", "Next.js"],
-	futureLearning: ["React Native"],
+	"Currently Learning": ["AI fine tuning", "Next.js"],
+	"Want to Learn": ["React Native"],
+	"Languages Spoken": ["Nepali", "English", "Newari", "Hindi", "Japanese"],
+	"Outdoor Activities": ["Cycling", "Climbing and Bouldering", "Hiking"],
+	"Games": ["Chess", "Sudoku", "Mobile Legends"],
 };
 
 export const facts = [
