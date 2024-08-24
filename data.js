@@ -33,6 +33,7 @@ export const educations = [
 		institute: "National School of Sciences",
 		startYear: "2018 AD",
 		passYear: "2020 AD",
+		grade: "3.78 (A+)",
 	},
 	{
 		level: "BSc. Computer Science and Information Technology",
@@ -248,16 +249,23 @@ export const projects = [
 	{
 		title: "Resort Booking System",
 		techStack: "PERN Stack (P = PostgreSQL), TypeScript, Tailwindcss",
-		description:"A map-based resort booking platform displaying real-time availability by date.",
+		description: "A map-based resort booking platform displaying real-time availability by date.",
 	},
 	{
 		title: "HeartWood",
 		techStack: "next.js, TypeScript, Tailwindcss, SQlite",
 		description: "A furniture e-commerce platform with a dynamic cart and page caching.",
-	}
+	},
 ];
 
 export const achievements = [
+	{
+		name: "Semester Scholarship",
+		description: `Awarded for securing 1st rank in each semester "BSc. Computer Science and Information Technology"`,
+		organizedBy: "Sagarmatha College of Science and Technology",
+		result: "1st Rank (6 times)",
+		date: "2021 - 2024",
+	},
 	{
 		name: "In-House Project Competition",
 		description:
@@ -276,8 +284,7 @@ export const achievements = [
 	},
 	{
 		name: "LOCUS TECHENERGY HACKATHON 2024",
-		description:
-			"Prayatna - A secure solution for data encryption at rest (SQL DB) using AES-256, and AWS KMS",
+		description: "Prayatna - A secure solution for data encryption at rest (SQL DB) using AES-256, and AWS KMS",
 		organizedBy: "LOCUS, Pulchowk Campus, IOE, TU",
 		result: "2nd Place",
 		date: "March 2024",
@@ -285,10 +292,10 @@ export const achievements = [
 	{
 		name: "DEERHACK 2024",
 		description:
-		"Doc Guard - A document validation solution that scans paper document with AI and stores the data in blockchain",
+			"Doc Guard - A document validation solution that scans paper document with AI and stores the data in blockchain",
 		result: "Blockchain Track Winner (1st Place)",
 		date: "May 2024",
-	}
+	},
 ];
 
 export const aboutMe = {
@@ -296,7 +303,7 @@ export const aboutMe = {
 	"Want to Learn": ["React Native"],
 	"Languages Spoken": ["Nepali", "English", "Newari", "Hindi", "Japanese"],
 	"Outdoor Activities": ["Cycling", "Climbing and Bouldering", "Hiking"],
-	"Games": ["Chess", "Sudoku", "Mobile Legends"],
+	Games: ["Chess", "Sudoku", "Mobile Legends"],
 };
 
 export const facts = [

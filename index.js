@@ -101,6 +101,9 @@ function educationalBackground() {
 		console.log(`${chalk.greenBright(education.level)}`);
 		console.log(`\t${education.institute}`);
 		console.log(`\t${education.startYear} - ${education.passYear}`);
+		if (education.grade) {
+			console.log(`\tGrade: ${education.grade}`);
+		}
 		console.log("--------------------------------------------");
 	});
 }
@@ -262,7 +265,7 @@ async function userInterface() {
 			"Learn More About Me",
 			"Random Fact About Me",
 			"Get this for Yourself",
-			"Exit",
+			chalk.redBright("Exit"),
 		],
 		message: "What would you like to know about me?",
 	});
@@ -294,7 +297,7 @@ async function userInterface() {
 		case "Get this for Yourself":
 			getThisForYourself();
 			break;
-		case "Exit":
+		case chalk.redBright("Exit"):
 			exit = true;
 			break;
 		default:
@@ -304,8 +307,6 @@ async function userInterface() {
 		console.log(chalk.redBright("Exiting..."));
 		await sleep(150);
 		console.log(chalk.red("Thank you for visiting"));
-		await sleep(150);
-		console.log(chalk.redBright("BYE"));
 	} else {
 		userInterface();
 	}
