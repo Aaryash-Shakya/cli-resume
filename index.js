@@ -5,16 +5,7 @@ import gradientString from "gradient-string";
 import chalk from "chalk";
 import inquirer from "inquirer";
 import nanospinner from "nanospinner";
-import {
-	contacts,
-	educations,
-	skills,
-	certifications,
-	projects,
-	achievements,
-	facts,
-	aboutMe,
-} from "./data.js";
+import { contacts, educations, skills, certifications, projects, achievements, facts, aboutMe } from "./data.js";
 
 // global variables
 let factIndex = 0;
@@ -42,10 +33,10 @@ function setFiglet(message) {
 	);
 }
 
-async function downloadAnimation(downloadName) {
-	const spinner = nanospinner.createSpinner(`Downloading ${downloadName}...`).start();
+async function downloadAnimation(loadingName, completedName) {
+	const spinner = nanospinner.createSpinner(`${loadingName}...`).start();
 	await sleep(300);
-	spinner.success({ text: `${downloadName} Downloaded` });
+	spinner.success({ text: completedName });
 }
 
 function printHeaderInBox(header) {
@@ -60,14 +51,13 @@ function printHeaderInBox(header) {
 }
 
 async function welcome() {
-	setFiglet("_Aaryash_\n_Shakya_\n");
+	setFiglet("_Aaryash_\n");
 	await sleep();
-	await downloadAnimation("User Profile");
-	await downloadAnimation("Contact Information");
-	await downloadAnimation("Educational Background");
-	await downloadAnimation("Skills and Certifications");
-	await downloadAnimation("Projects");
-	await downloadAnimation("Hobbies and Interests");
+	await downloadAnimation("Downloading Resources", "Resources Downloaded");
+	await downloadAnimation("Setting Up Profile Data", "Profile Data Set");
+	await downloadAnimation("Preparing Skills & Certifications", "Skills & Certifications Prepared");
+	await downloadAnimation("Loading Projects", "Projects Loaded");
+	await downloadAnimation("Finalizing Setup", "Setup Finalized");
 	await sleep();
 }
 
@@ -76,8 +66,7 @@ async function introduction() {
 	await sleep();
 	console.log(`${chalk.blueBright("Full Stack Developer")} with expertise in web applications.`);
 	console.log(`Pursuing ${chalk.yellow("BSc. CSIT")} at Sagarmatha College of Science and Technology.`);
-	console.log("Passionate about clean code, innovative technology, and continuous learning.");
-	console.log("Enthusiastic contributor to open-source projects and active participant in coding communities.");
+	console.log("Passionate about clean code, technology, and open-source. Active in developer communities.");
 }
 
 function contactInformation() {
@@ -239,11 +228,13 @@ function randomFact() {
 	factIndex = (factIndex + 1) % facts.length;
 }
 
+// Please do not remove or alter the following link to the original repository.
+// Keeping this link helps support the original creator and ensures proper credit.
 function getThisForYourself() {
 	printHeaderInBox("Get For Yourself");
 	console.log("\n--------------------------------------------");
-	console.log("Visit my GitHub profile to get this for yourself. The instructions are in the README.md file.");
-	console.log("https://github.com/Aaryash-Shakya/cli-resume/blob/main/README.md");
+	console.log("Visit the link below to get this for yourself.");
+	console.log("https://github.com/Aaryash-Shakya/cli-resume/blob/main/GET-FOR-YOURSELF.md");
 	console.log("\n--------------------------------------------");
 }
 

@@ -44,20 +44,15 @@ export const educations = [
 ];
 
 // skill based on current year 2024 Jan
+// the reason i don't use the date to dynamically calculate the experience years is because some skills may have been discontinued or may involve breaks
+// dates only serves as a reference for me
 export const skills = [
 	{
-		name: "C",
+		name: "C/C++",
 		level: "Intermediate",
 		category: "Programming Language",
 		experience: "3 years",
 		// 2021-04-01
-	},
-	{
-		name: "C++",
-		level: "Intermediate",
-		category: "Programming Language",
-		experience: "3 years",
-		// 2021-10-01
 	},
 	{
 		name: "JavaScript",
@@ -303,7 +298,7 @@ export const aboutMe = {
 	"Want to Learn": ["React Native"],
 	"Languages Spoken": ["Nepali", "English", "Newari", "Hindi", "Japanese"],
 	"Outdoor Activities": ["Cycling", "Climbing and Bouldering", "Hiking"],
-	Games: ["Chess", "Sudoku", "Mobile Legends"],
+	Games: ["Chess", "Mobile Legends"],
 };
 
 export const facts = [
@@ -311,9 +306,10 @@ export const facts = [
 	"I can speak 5 languages: Nepali, English, Newari, Hindi, Japanese.",
 	"I enjoy reading web novels in my free time.",
 	"I enjoy climbing and bouldering.",
-	"I am pretty good at chess (1500 chess.com)",
+	"I play chess pretty often (1500 in chess.com)",
 	"I won gold medal in my college chess competition 2024.",
+	"Favorite Books: The Monk who Sold His Ferrari, Atomic Habits",
 	"Favorite Dev YouTuber: Fireship, Hyperplexed",
-	"Favorite Linux Distro: Linux Mint XFCE",
-	"Currently working on an e-commerce app with next",
+	"Favorite Linux Distro: Linux Mint Cinnamon",
+	"Currently working on my personal portfolio.",
 ];
