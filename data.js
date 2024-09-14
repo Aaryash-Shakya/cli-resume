@@ -91,7 +91,7 @@ export const skills = [
 	},
 	{
 		name: "SASS",
-		level: "Advance",
+		level: "Intermediate",
 		category: "Stylesheet Language",
 		experience: "3 years",
 		// 2022
@@ -106,7 +106,7 @@ export const skills = [
 	{
 		name: "Tailwind",
 		level: "Intermediate",
-		category: "Framework and Library",
+		category: "Library",
 		experience: "2 years",
 		// 2023
 	},
@@ -114,25 +114,25 @@ export const skills = [
 		name: "React",
 		level: "Intermediate",
 		category: "Framework and Library",
-		experience: "2 years",
+		experience: "3 years",
 		// 2022
 	},
 	{
 		name: "Next.js",
 		level: "Beginner",
 		category: "Framework and Library",
-		experience: "0 years",
+		experience: "1 year",
 		// 2024
 	},
 	{
 		name: "Express",
 		level: "Intermediate",
 		category: "Framework and Library",
-		experience: "1 year",
+		experience: "2 years",
 		// 2022
 	},
 	{
-		name: "Node js",
+		name: "Node.js",
 		level: "Intermediate",
 		category: "Runtime Environment",
 		experience: "1 year",
@@ -149,14 +149,14 @@ export const skills = [
 		name: "MongoDB",
 		level: "Intermediate",
 		category: "Database",
-		experience: "1 year",
+		experience: "2 years",
 		// 2022
 	},
 	{
 		name: "PostgreSQL",
 		level: "Beginner",
 		category: "Database",
-		experience: "2 months",
+		experience: "1 year",
 		// 2023
 	},
 	{
@@ -177,7 +177,7 @@ export const skills = [
 		name: "Linux",
 		level: "Intermediate",
 		category: "Operating System",
-		experience: "2 years",
+		experience: "3 years",
 		// 2022
 	},
 	{
