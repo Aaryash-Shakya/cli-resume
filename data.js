@@ -258,7 +258,7 @@ export const achievements = [
 		name: "Semester Scholarship",
 		description: `Awarded for securing 1st rank in each semester "BSc. Computer Science and Information Technology"`,
 		organizedBy: "Sagarmatha College of Science and Technology",
-		result: "1st Rank (6 times)",
+		result: "1st Rank (7 times)",
 		date: "2021 - 2024",
 	},
 	{
