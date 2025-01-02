@@ -30,3 +30,27 @@ npx aaryash
 
 # Get this for yourselves
 [read GET-FOR-YOURSELF.md](https://github.com/Aaryash-Shakya/cli-resume/blob/main/GET-FOR-YOURSELF.md)
+
+
+# Uninstallation
+
+If you need to uninstall the `aaryash` package, follow these steps based on how you installed it:  
+
+### Global Installation  
+
+If you installed the package globally using `npm install -g`, you can remove it with:  
+
+```sh
+npm uninstall -g aaryash
+```  
+
+
+### Local Installation  
+
+If you installed the package locally in a directory, navigate to the directory where it was installed and run:  
+
+```sh
+npm uninstall aaryash
+```  
+
+If you used `npx` to run the package without installation, there's no need for uninstallation, as it was not stored locally.
